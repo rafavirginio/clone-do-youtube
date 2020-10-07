@@ -1,0 +1,22 @@
+/* Reset CSS */
+
+* {
+    margin: 0;
+    paddinh: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ddd;
+}
+
+header {
+    background-color: chartreuse;
+    padding: 10px;
+}
+
+header,
+section {
+    padding: 5rem;
+    background-color: chartreuse;
+}

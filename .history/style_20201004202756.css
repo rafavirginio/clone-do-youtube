@@ -1,0 +1,75 @@
+/* Reset CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ddd;
+}
+
+header {
+    background-color: chartreuse;
+}
+
+header,
+section {
+    padding: 5rem;
+}
+
+main {
+    margin: auto;
+    display: grid;
+    grid-row-gap: 1rem;
+    grid-template-areas: "video-player video-player" "video-info video-info" "actions actions" "channel subscribe" "up-next up-next";
+}
+
+.video-player {
+    background-color: blue;
+    grid-area: video-player;
+}
+
+.video-info {
+    background-color: yellow;
+    grid-area: video-info;
+}
+
+.actions {
+    background-color: green;
+    grid-area: actions;
+}
+
+.channel {
+    background-color: coral;
+    grid-area: channel;
+}
+
+.subscribe {
+    background-color: red;
+    grid-area: subscribe;
+}
+
+.ad {
+    background-color: orange;
+    grid-area: ad;
+}
+
+.up-next {
+    background-color: rgb(252, 150, 167);
+    grid-area: up-next;
+}
+
+@media screen and(max-width: 800px) {
+    .ad {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    main {
+        max-width: 1200px;
+        grid-template-areas: "video-player video-player ad" "video-player video-player up-next" "video-info   actions   up-next" "channel      subscribe    up-next";
+    }
+}
